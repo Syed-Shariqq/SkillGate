@@ -63,10 +63,10 @@ const RoleSelectionPage = () => {
           {/* Candidate Card */}
           <div 
             onClick={() => setSelectedRole('candidate')}
-            className={`relative flex flex-col items-center text-center p-8 rounded-2xl cursor-pointer min-w-[240px] max-w-[280px] mx-auto md:mx-0 transition-all duration-200 border ${
+            className={`relative flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer min-w-[240px] max-w-[280px] mx-auto md:mx-0 transition-all duration-200 border ${
               selectedRole === 'candidate' 
-                ? 'border-accent-primary bg-bg-secondary ring-2 ring-accent-primary/20 -translate-y-1' 
-                : 'border-bg-secondary bg-bg-card hover:border-accent-primary/50 hover:-translate-y-1'
+                ? 'border-accent-primary bg-bg-card ring-2 ring-accent-primary/20 -translate-y-1' 
+                : 'border-border bg-bg-card hover:border-accent-primary/50 hover:-translate-y-1'
             }`}
           >
             {selectedRole === 'candidate' && (
@@ -74,7 +74,7 @@ const RoleSelectionPage = () => {
                 <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
               </div>
             )}
-            <div className="text-4xl mb-4">👤</div>
+            <div className="text-5xl mb-4">👤</div>
             <h2 className="text-xl font-semibold mb-2">I'm Looking for Work</h2>
             <p className="text-text-secondary text-sm">Find jobs and prove your skills with AI-powered assessments</p>
           </div>
@@ -82,10 +82,10 @@ const RoleSelectionPage = () => {
           {/* Recruiter Card */}
           <div 
             onClick={() => setSelectedRole('recruiter')}
-            className={`relative flex flex-col items-center text-center p-8 rounded-2xl cursor-pointer min-w-[240px] max-w-[280px] mx-auto md:mx-0 transition-all duration-200 border ${
+            className={`relative flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer min-w-[240px] max-w-[280px] mx-auto md:mx-0 transition-all duration-200 border ${
               selectedRole === 'recruiter' 
-                ? 'border-accent-primary bg-bg-secondary ring-2 ring-accent-primary/20 -translate-y-1' 
-                : 'border-bg-secondary bg-bg-card hover:border-accent-primary/50 hover:-translate-y-1'
+                ? 'border-accent-primary bg-bg-card ring-2 ring-accent-primary/20 -translate-y-1' 
+                : 'border-border bg-bg-card hover:border-accent-primary/50 hover:-translate-y-1'
             }`}
           >
             {selectedRole === 'recruiter' && (
@@ -93,7 +93,7 @@ const RoleSelectionPage = () => {
                 <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
               </div>
             )}
-            <div className="text-4xl mb-4">🏢</div>
+            <div className="text-5xl mb-4">🏢</div>
             <h2 className="text-xl font-semibold mb-2">I'm Hiring</h2>
             <p className="text-text-secondary text-sm">Post jobs and let AI screen candidates before they reach you</p>
           </div>
