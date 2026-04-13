@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button";
 import ScrollReveal from "../../ui/ScrollReveal";
 import HeroDashboard from "./HeroDashboard";
 
 export default function Hero() {
+  const navigate = useNavigate();
   const scrollTo = (href) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -55,9 +57,9 @@ export default function Hero() {
               <Button
                 variant="ghost"
                 size="lg"
-                onClick={() => scrollTo("#how-it-works")}
+                onClick={() => navigate("/demo")}
               >
-                See How It Works
+                Try Demo
               </Button>
             </div>
 
