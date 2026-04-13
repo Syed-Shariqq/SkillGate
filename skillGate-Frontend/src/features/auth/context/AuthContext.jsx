@@ -44,6 +44,14 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
+  const resetPassword = async (email) => {
+    return authService.resetPassword(email);
+  };
+
+  const sendVerificationEmail = async (email) => {
+    return authService.sendVerificationEmail(email);
+  };
+
   const value = {
     user,
     loading,
@@ -53,6 +61,8 @@ export const AuthProvider = ({ children }) => {
     register,
     assignRole,
     logout,
+    resetPassword,
+    sendVerificationEmail
   };
 
   return (
