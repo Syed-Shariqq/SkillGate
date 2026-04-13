@@ -51,7 +51,7 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-              <Button variant="primary" size="lg">
+              <Button onClick={() => navigate('/auth')} variant="primary" size="lg">
                 Start Hiring Smarter →
               </Button>
               <Button

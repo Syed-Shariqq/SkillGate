@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import Button from "../ui/Button";
 import skillgateLogo from "../../assets/skillGate-logo.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -57,8 +60,8 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm">Login</Button>
-          <Button variant="primary" size="sm">Sign Up Free</Button>
+          <Button onClick={() => navigate('/auth')} variant="ghost" size="sm">Login</Button>
+          <Button onClick={() => navigate('/auth')} variant="primary" size="sm">Sign Up Free</Button>
         </div>
 
         <button

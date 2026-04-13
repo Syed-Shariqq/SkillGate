@@ -24,25 +24,25 @@ const ForgotPasswordPage = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-6 bg-[#121821] font-['Plus_Jakarta_Sans']">
-      <Card className="w-full max-w-md !p-8 !rounded-2xl border border-[#273244] bg-[#1A2330] shadow-xl text-center" hoverable={false}>
+    <div className="flex min-h-screen items-center justify-center p-6 bg-bg-secondary font-['Plus_Jakarta_Sans']">
+      <Card className="w-full max-w-md p-8! rounded-2xl! border border-bg-secondary bg-bg-card shadow-xl text-center" hoverable={false}>
         {!isSubmitted ? (
           <>
-            <h1 className="text-2xl font-bold text-[#F1F5F9] mb-3">Reset your password</h1>
-            <p className="text-[#94A3B8] text-sm mb-8">
+            <h1 className="text-2xl font-bold text-text-primary mb-3">Reset your password</h1>
+            <p className="text-text-secondary text-sm mb-8">
               Enter your email and we'll send reset instructions.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6 text-left" noValidate>
               <div>
-                <label className="block text-sm font-medium text-[#F1F5F9] mb-1.5">Email Address</label>
+                <label className="block text-sm font-medium text-text-primary mb-1.5">Email Address</label>
                 <input 
                   type="email" 
                   required
                   placeholder="ahmed@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-[#0B0F14] border border-[#273244] focus:border-[#6366F1] rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#6366F1]/30 text-[#F1F5F9] placeholder:text-[#94A3B8] transition-colors"
+                  className="w-full bg-bg-primary border border-border focus:border-accent-primary rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-accent-primary/30 text-text-primary placeholder:text-text-secondary transition-colors"
                 />
               </div>
 
@@ -55,7 +55,7 @@ const ForgotPasswordPage = () => {
 
             <button 
               onClick={() => navigate('/auth')}
-              className="mt-6 text-[#6366F1] hover:text-[#5a38e8] text-sm font-medium transition-colors cursor-pointer inline-block"
+              className="mt-6 text-accent-primary hover:text-accent-secondary text-sm font-medium transition-colors cursor-pointer inline-block"
             >
               ← Back to login
             </button>
@@ -63,9 +63,9 @@ const ForgotPasswordPage = () => {
         ) : (
           <>
             <div className="text-5xl mb-6">✉️</div>
-            <h1 className="text-2xl font-bold text-[#F1F5F9] mb-3">Check your email</h1>
-            <p className="text-[#94A3B8] text-sm mb-8">
-              We've sent instructions to <span className="text-[#F1F5F9] font-medium">{email}</span>. 
+            <h1 className="text-2xl font-bold text-text-primary mb-3">Check your email</h1>
+            <p className="text-text-secondary text-sm mb-8">
+              We've sent instructions to <span className="text-text-primary font-medium">{email}</span>. 
               Check your spam folder too.
             </p>
 
@@ -75,7 +75,7 @@ const ForgotPasswordPage = () => {
 
             <button 
               onClick={() => navigate('/auth')}
-              className="text-[#6366F1] hover:text-[#5a38e8] text-sm font-medium transition-colors cursor-pointer inline-block"
+              className="text-accent-primary hover:text-[#5a38e8] text-sm font-medium transition-colors cursor-pointer inline-block"
             >
               ← Back to login
             </button>

@@ -2,8 +2,12 @@ import SectionWrapper from "../../ui/SectionWrapper";
 import SectionLabel from "../../ui/SectionLabel";
 import ScrollReveal from "../../ui/ScrollReveal";
 import Button from "../../ui/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function CTA() {
+
+  const navigate = useNavigate();
+  
   return (
     <SectionWrapper id="cta" bg="secondary">
       <ScrollReveal>
@@ -22,6 +26,7 @@ export default function CTA() {
               Let AI do the screening. You do the hiring.
             </p>
             <Button
+              onClick={() => navigate('/auth')}
               variant="primary"
               size="xl"
             >

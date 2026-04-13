@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Button from '../../../components/ui/Button';
+import logo from '../../../assets/skillGate-logo.png';
 
 const RoleSelectionPage = () => {
   const { assignRole, user, isAuthenticated, loading } = useAuth();
@@ -42,18 +43,18 @@ const RoleSelectionPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#0B0F14] text-[#F1F5F9] font-['Plus_Jakarta_Sans'] p-6 relative">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-bg-primary text-text-primary font-['Plus_Jakarta_Sans'] p-6 relative">
       <div className="absolute top-8 left-1/2 -translate-x-1/2 flex items-center gap-2 cursor-pointer" onClick={() => navigate('/')}>
-        <div className="w-8 h-8 rounded bg-[#6366F1] flex items-center justify-center font-bold text-white">S</div>
-        <span className="text-xl font-bold tracking-tight">SkillGate</span>
+        <img src={logo} alt="logo" className="w-8 h-8"></img>
+        <span className="text-xl bg-linear-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent font-bold tracking-tight">SkillGate</span>
       </div>
 
       <div className="text-center w-full max-w-3xl mt-16 md:mt-0">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">How will you use SkillGate?</h1>
-        <p className="text-[#94A3B8] mb-12">You can always add the other role later in settings.</p>
+        <p className="text-text-secondary mb-12">You can always add the other role later in settings.</p>
 
         {error && (
-          <div className="mb-8 max-w-md mx-auto bg-[#EF4444]/10 border border-[#EF4444]/30 text-[#EF4444] rounded-lg p-3 text-sm">
+          <div className="mb-8 max-w-md mx-auto bg-error/10 border border-error/30 text-error rounded-lg p-3 text-sm">
             {error}
           </div>
         )}
@@ -64,18 +65,18 @@ const RoleSelectionPage = () => {
             onClick={() => setSelectedRole('candidate')}
             className={`relative flex flex-col items-center text-center p-8 rounded-2xl cursor-pointer min-w-[240px] max-w-[280px] mx-auto md:mx-0 transition-all duration-200 border ${
               selectedRole === 'candidate' 
-                ? 'border-[#6366F1] bg-[#1A2330] ring-2 ring-[#6366F1]/20 -translate-y-1' 
-                : 'border-[#273244] bg-[#1A2330] hover:border-[#6366F1]/50 hover:-translate-y-1'
+                ? 'border-accent-primary bg-bg-secondary ring-2 ring-accent-primary/20 -translate-y-1' 
+                : 'border-bg-secondary bg-bg-card hover:border-accent-primary/50 hover:-translate-y-1'
             }`}
           >
             {selectedRole === 'candidate' && (
-              <div className="absolute top-4 right-4 bg-[#6366F1] text-white rounded-full w-6 h-6 flex items-center justify-center shadow-lg">
+              <div className="absolute top-4 right-4 bg-accent-primary text-white rounded-full w-6 h-6 flex items-center justify-center shadow-lg">
                 <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
               </div>
             )}
             <div className="text-4xl mb-4">👤</div>
             <h2 className="text-xl font-semibold mb-2">I'm Looking for Work</h2>
-            <p className="text-[#94A3B8] text-sm">Find jobs and prove your skills with AI-powered assessments</p>
+            <p className="text-text-secondary text-sm">Find jobs and prove your skills with AI-powered assessments</p>
           </div>
 
           {/* Recruiter Card */}
@@ -83,18 +84,18 @@ const RoleSelectionPage = () => {
             onClick={() => setSelectedRole('recruiter')}
             className={`relative flex flex-col items-center text-center p-8 rounded-2xl cursor-pointer min-w-[240px] max-w-[280px] mx-auto md:mx-0 transition-all duration-200 border ${
               selectedRole === 'recruiter' 
-                ? 'border-[#6366F1] bg-[#1A2330] ring-2 ring-[#6366F1]/20 -translate-y-1' 
-                : 'border-[#273244] bg-[#1A2330] hover:border-[#6366F1]/50 hover:-translate-y-1'
+                ? 'border-accent-primary bg-bg-secondary ring-2 ring-accent-primary/20 -translate-y-1' 
+                : 'border-bg-secondary bg-bg-card hover:border-accent-primary/50 hover:-translate-y-1'
             }`}
           >
             {selectedRole === 'recruiter' && (
-              <div className="absolute top-4 right-4 bg-[#6366F1] text-white rounded-full w-6 h-6 flex items-center justify-center shadow-lg">
+              <div className="absolute top-4 right-4 bg-accent-primary text-white rounded-full w-6 h-6 flex items-center justify-center shadow-lg">
                 <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
               </div>
             )}
             <div className="text-4xl mb-4">🏢</div>
             <h2 className="text-xl font-semibold mb-2">I'm Hiring</h2>
-            <p className="text-[#94A3B8] text-sm">Post jobs and let AI screen candidates before they reach you</p>
+            <p className="text-text-secondary text-sm">Post jobs and let AI screen candidates before they reach you</p>
           </div>
         </div>
 

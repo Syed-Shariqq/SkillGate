@@ -22,12 +22,12 @@ const EmailVerificationPendingPage = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-6 bg-[#121821] font-['Plus_Jakarta_Sans']">
-      <Card className="w-full max-w-md !p-8 !rounded-2xl border border-[#273244] bg-[#1A2330] shadow-xl text-center" hoverable={false}>
+    <div className="flex min-h-screen items-center justify-center p-6 bg-bg-secondary font-['Plus_Jakarta_Sans']">
+      <Card className="w-full max-w-md p-8! rounded-2xl! border border-border bg-bg-card shadow-xl text-center" hoverable={false}>
         <div className="text-5xl mb-6">✉️</div>
-        <h1 className="text-2xl font-bold text-[#F1F5F9] mb-3">Verify your email</h1>
-        <p className="text-[#94A3B8] text-sm mb-8">
-          We've sent a verification link to <span className="text-[#F1F5F9] font-medium">{email}</span>. 
+        <h1 className="text-2xl font-bold text-text-primary mb-3">Verify your email</h1>
+        <p className="text-text-secondary text-sm mb-8">
+          We've sent a verification link to <span className="text-text-primary font-medium">{email}</span>. 
           Click the link to activate your account.
         </p>
 
@@ -35,13 +35,13 @@ const EmailVerificationPendingPage = () => {
           {isSubmitting ? <div className="w-5 h-5 border-2 border-slate-600 border-t-transparent rounded-full animate-spin"></div> : 'Resend verification email'}
         </Button>
 
-        <p className="text-[#94A3B8] text-sm mb-4">
-          Wrong email? <button onClick={() => navigate('/auth')} className="text-[#6366F1] hover:text-[#5a38e8] transition-colors cursor-pointer">Sign up again</button>
+        <p className="text-text-secondary text-sm mb-4">
+          Wrong email? <button onClick={() => navigate('/auth')} className="text-accent-primary hover:text-accent-secondary transition-colors cursor-pointer">Sign up again</button>
         </p>
 
         <button 
           onClick={() => navigate('/auth')}
-          className="text-[#94A3B8] hover:text-[#F1F5F9] text-sm font-medium transition-colors cursor-pointer"
+          className="text-text-secondary hover:text-text-primary text-sm font-medium transition-colors cursor-pointer"
         >
           ← Back to login
         </button>
