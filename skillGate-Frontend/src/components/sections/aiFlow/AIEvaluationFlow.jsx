@@ -95,7 +95,7 @@ function FlowNode({ node, index, isLast }) {
       </span>
 
       <h3 className="text-white font-bold text-sm mb-1">{node.label}</h3>
-      <p className="text-slate-400 text-[11px] leading-relaxed max-w-[140px]">{node.desc}</p>
+      <p className="text-slate-400 text-[11px] leading-relaxed max-w-35">{node.desc}</p>
     </div>
   );
 }
