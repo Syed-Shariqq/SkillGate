@@ -107,39 +107,45 @@ export default function DemoAssessment() {
     setError(null);
   };
 
-  const evaluateScore = () => {
+  const buildEvaluationData = () => {
     const questions = MOCK_QUESTIONS[selectedRole];
     let totalScore = 0;
     let maxPossibleScore = 0;
+    const strengths = [];
+    const weaknesses = [];
+    const questionBreakdown = [];
 
     for (const q of questions) {
       maxPossibleScore += q.weight;
-      const userAnswer = answers[q.id];
-
-      if (!userAnswer || userAnswer.trim() === "") continue;
+      const userAnswer = answers[q.id] || "";
 
       if (q.type === "mcq") {
-        if (userAnswer === q.correct) {
+        const correct = userAnswer === q.correct;
+        if (correct) {
           totalScore += q.weight;
+          strengths.push(q.question.replace(/\?$/, "").trim());
+        } else {
+          weaknesses.push(q.question.replace(/\?$/, "").trim());
         }
+        questionBreakdown.push({ question: q.question, type: "mcq", correct, userAnswer, correctAnswer: q.correct });
       } else if (q.type === "text") {
         const text = userAnswer.toLowerCase();
-        let matchCount = 0;
-        q.expectedKeywords.forEach((keyword) => {
-          if (text.includes(keyword.toLowerCase())) {
-            matchCount++;
-          }
-        });
+        const matched = q.expectedKeywords.filter((kw) => text.includes(kw.toLowerCase()));
+        const missing = q.expectedKeywords.filter((kw) => !text.includes(kw.toLowerCase()));
+        const matchRatio = q.expectedKeywords.length > 0 ? matched.length / q.expectedKeywords.length : 0;
 
-        // Calculate partial score
-        const matchRatio = matchCount / q.expectedKeywords.length;
-        // Cap ratio at 1
         totalScore += q.weight * Math.min(matchRatio, 1);
+        matched.forEach((kw) => strengths.push(kw));
+        missing.forEach((kw) => weaknesses.push(kw));
+        questionBreakdown.push({ question: q.question, type: "text", matched, missing, matchRatio });
       }
     }
 
-    const normalizedScore = Math.max(0, Math.min(100, Math.round((totalScore / maxPossibleScore) * 100)));
-    return normalizedScore;
+    const normalizedScore = maxPossibleScore > 0
+      ? Math.max(0, Math.min(100, Math.round((totalScore / maxPossibleScore) * 100)))
+      : 0;
+
+    return { score: normalizedScore, strengths, weaknesses, questionBreakdown, role: selectedRole };
   };
 
   const handleSubmit = () => {
@@ -152,8 +158,8 @@ export default function DemoAssessment() {
       return;
     }
 
-    const finalScore = evaluateScore();
-    navigate("/result", { state: { score: finalScore } });
+    const evalData = buildEvaluationData();
+    navigate("/result", { state: evalData });
   };
 
   return (
