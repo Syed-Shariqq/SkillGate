@@ -1,6 +1,6 @@
-import ScrollReveal from "../../ui/ScrollReveal";
-import SectionWrapper from "../../ui/SectionWrapper";
-import Card from "../../ui/Card";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import Card from "@/components/ui/Card";
 
 const STATS = [
   { value: "10,000+", label: "Candidates Screened", desc: "Pre-screened by AI before reaching your inbox" },

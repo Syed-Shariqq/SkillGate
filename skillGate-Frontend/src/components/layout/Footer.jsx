@@ -1,4 +1,4 @@
-import skillgateLogo from "../../assets/skillGate-logo.png";
+import skillgateLogo from "@/assets/skillGate-logo.png";
 
 export default function Footer() {
   const FOOTER_LINKS = [

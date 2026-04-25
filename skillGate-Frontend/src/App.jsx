@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { BrowserRouter, useNavigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './features/auth/context/AuthContext';
-import AppRoutes from './routes/index';
+import { AuthProvider, useAuth } from '@/features/auth/context/AuthContext';
+import AppRoutes from '@/routes/index';
 import './index.css';
 
 const RootRedirect = ({ children }) => {

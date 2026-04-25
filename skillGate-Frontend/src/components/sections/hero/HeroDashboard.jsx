@@ -1,5 +1,5 @@
 import CandidateRow from "./CandidateRow";
-import MicroLabel from "../../ui/MicroLabel";
+import MicroLabel from "@/components/ui/MicroLabel";
 
 export default function HeroDashboard() {
   return (

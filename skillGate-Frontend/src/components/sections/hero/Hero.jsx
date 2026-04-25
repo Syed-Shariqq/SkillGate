@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Button from "../../ui/Button";
-import ScrollReveal from "../../ui/ScrollReveal";
+import Button from "@/components/ui/Button";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import HeroDashboard from "./HeroDashboard";
 
 export default function Hero() {

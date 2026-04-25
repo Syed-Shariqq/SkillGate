@@ -1,7 +1,7 @@
-import SectionWrapper from "../../ui/SectionWrapper";
-import SectionLabel from "../../ui/SectionLabel";
-import ScrollReveal from "../../ui/ScrollReveal";
-import Button from "../../ui/Button";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import SectionLabel from "@/components/ui/SectionLabel";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import Button from "@/components/ui/Button";
 
 const PLANS = [
   {

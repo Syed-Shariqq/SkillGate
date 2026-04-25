@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
-import Button from "../components/ui/Button";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import Button from "@/components/ui/Button";
 
 const ROLES = [
   { id: "frontend", title: "Frontend Developer", icon: "⚛️" },
@@ -159,7 +159,7 @@ export default function DemoAssessment() {
     }
 
     const evalData = buildEvaluationData();
-    navigate("/result", { state: evalData });
+    navigate("result", { state: evalData });
   };
 
   return (

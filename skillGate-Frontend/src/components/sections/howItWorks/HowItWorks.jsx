@@ -1,6 +1,6 @@
-import SectionWrapper from "../../ui/SectionWrapper";
-import SectionLabel from "../../ui/SectionLabel";
-import ScrollReveal from "../../ui/ScrollReveal";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import SectionLabel from "@/components/ui/SectionLabel";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const STEPS = [
   {

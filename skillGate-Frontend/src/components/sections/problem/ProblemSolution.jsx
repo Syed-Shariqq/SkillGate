@@ -1,7 +1,7 @@
-import SectionWrapper from "../../ui/SectionWrapper";
-import SectionLabel from "../../ui/SectionLabel";
-import ScrollReveal from "../../ui/ScrollReveal";
-import Card from "../../ui/Card";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import SectionLabel from "@/components/ui/SectionLabel";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import Card from "@/components/ui/Card";
 
 const PAIN_POINTS = [
   "Spending hours reading resumes that don't match the role",

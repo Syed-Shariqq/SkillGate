@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import Button from '../../../components/ui/Button';
-import logo from '../../../assets/skillGate-logo.png';
+import { useAuth } from '@/features/auth/context/AuthContext';
+import Button from '@/components/ui/Button';
+import logo from '@/assets/skillGate-logo.png';
 
 const RoleSelectionPage = () => {
   const { assignRole, user, isAuthenticated, loading } = useAuth();
@@ -63,7 +63,7 @@ const RoleSelectionPage = () => {
           {/* Candidate Card */}
           <div 
             onClick={() => setSelectedRole('candidate')}
-            className={`relative flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer min-w-[240px] max-w-[280px] mx-auto md:mx-0 transition-all duration-200 border ${
+            className={`relative flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer min-w-60 max-w-70 mx-auto md:mx-0 transition-all duration-200 border ${
               selectedRole === 'candidate' 
                 ? 'border-accent-primary bg-bg-card ring-2 ring-accent-primary/20 -translate-y-1' 
                 : 'border-border bg-bg-card hover:border-accent-primary/50 hover:-translate-y-1'
@@ -82,7 +82,7 @@ const RoleSelectionPage = () => {
           {/* Recruiter Card */}
           <div 
             onClick={() => setSelectedRole('recruiter')}
-            className={`relative flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer min-w-[240px] max-w-[280px] mx-auto md:mx-0 transition-all duration-200 border ${
+            className={`relative flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer min-w-60 max-w-70 mx-auto md:mx-0 transition-all duration-200 border ${
               selectedRole === 'recruiter' 
                 ? 'border-accent-primary bg-bg-card ring-2 ring-accent-primary/20 -translate-y-1' 
                 : 'border-border bg-bg-card hover:border-accent-primary/50 hover:-translate-y-1'

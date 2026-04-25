@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import Button from '../../../components/ui/Button';
-import Card from '../../../components/ui/Card';
-import useDebounce from '../../../shared/hooks/useDebounce';
-import logo from '../../../assets/skillGate-logo.png';
+import { useAuth } from '@/features/auth/context/AuthContext';
+import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
+import useDebounce from '@/shared/hooks/useDebounce';
+import logo from '@/assets/skillGate-logo.png';
 
 const AuthPage = () => {
   const [mode, setMode] = useState('login'); // 'login' or 'signup'

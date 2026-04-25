@@ -1,6 +1,6 @@
-import ScrollReveal from "../../ui/ScrollReveal";
-import SectionLabel from "../../ui/SectionLabel";
-import MicroLabel from "../../ui/MicroLabel";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import SectionLabel from "@/components/ui/SectionLabel";
+import MicroLabel from "@/components/ui/MicroLabel";
 
 const FLOW_NODES = [
   {

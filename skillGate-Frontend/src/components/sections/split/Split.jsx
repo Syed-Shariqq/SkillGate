@@ -1,9 +1,9 @@
-import SectionWrapper from "../../ui/SectionWrapper";
-import SectionLabel from "../../ui/SectionLabel";
-import ScrollReveal from "../../ui/ScrollReveal";
-import Card from "../../ui/Card";
-import Button from "../../ui/Button";
-import MicroLabel from "../../ui/MicroLabel";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import SectionLabel from "@/components/ui/SectionLabel";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import Card from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
+import MicroLabel from "@/components/ui/MicroLabel";
 
 const RECRUITER_FEATURES = [
   "Post jobs, get assessments auto-generated",

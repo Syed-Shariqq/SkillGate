@@ -5,15 +5,15 @@ import ProtectedRoute from './ProtectedRoute';
 import RoleRoute from './RoleRoute';
 
 // Pages
-import LandingPage from '../pages/LandingPage';
-import DemoAssessment from '../pages/DemoAssessment';
-import DemoResult from '../pages/DemoResult';
+import LandingPage from '@/pages/LandingPage';
+import DemoAssessment from '@/pages/DemoAssessment';
+import DemoResult from '@/pages/DemoResult';
 
 // Feature Pages
-import AuthPage from '../features/auth/pages/AuthPage';
-import RoleSelectionPage from '../features/auth/pages/RoleSelectionPage';
-import CandidateDashboard from '../features/candidate/pages/CandidateDashboard';
-import RecruiterDashboard from '../features/recruiter/pages/RecruiterDashboard';
+import AuthPage from '@/features/auth/pages/AuthPage';
+import RoleSelectionPage from '@/features/auth/pages/RoleSelectionPage';
+import CandidateDashboard from '@/features/candidate/pages/CandidateDashboard';
+import RecruiterDashboard from '@/features/recruiter/pages/RecruiterDashboard';
 
 const AppRoutes = () => {
   return (

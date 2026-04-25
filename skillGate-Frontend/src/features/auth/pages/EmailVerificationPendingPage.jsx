@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import Button from '../../../components/ui/Button';
-import Card from '../../../components/ui/Card';
+import { useAuth } from '@/features/auth/context/AuthContext';
+import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
 
 const EmailVerificationPendingPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);

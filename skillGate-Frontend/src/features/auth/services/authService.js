@@ -1,4 +1,4 @@
-import apiClient from '../../../shared/services/apiClient.js';
+import apiClient from '@/shared/services/apiClient.js';
 
 const COLLECTION = 'sg_users';
 

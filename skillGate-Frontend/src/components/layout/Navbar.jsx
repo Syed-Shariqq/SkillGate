@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Button from "../ui/Button";
-import skillgateLogo from "../../assets/skillGate-logo.png";
+import Button from "@/components/ui/Button";
+import skillgateLogo from "@/assets/skillGate-logo.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {

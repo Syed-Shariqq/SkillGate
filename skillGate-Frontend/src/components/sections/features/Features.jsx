@@ -1,8 +1,8 @@
-import SectionWrapper from "../../ui/SectionWrapper";
-import SectionLabel from "../../ui/SectionLabel";
-import ScrollReveal from "../../ui/ScrollReveal";
-import Card from "../../ui/Card";
-import MicroLabel from "../../ui/MicroLabel";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import SectionLabel from "@/components/ui/SectionLabel";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import Card from "@/components/ui/Card";
+import MicroLabel from "@/components/ui/MicroLabel";
 
 const FEATURES = [
   {
